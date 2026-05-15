@@ -21,14 +21,26 @@ jobs:
           cache: npm
       
       - name: Print version before
-        run: npm version
+        run: |
+          echo "npm version"
+          npm version
+          echo "nvm --version"
+          nvm --version
+          echo "nvm ls"
+          nvm ls
       
       - name: Update npm to latest
         run: |
           $NVM_DIR/nvm.sh install-latest-npm
       
       - name: Print version after
-        run: npm version
+        run: |
+          echo "npm version"
+          npm version
+          echo "nvm --version"
+          nvm --version
+          echo "nvm ls"
+          nvm ls
 
       - name: Install dependencies
         run: npm ci
