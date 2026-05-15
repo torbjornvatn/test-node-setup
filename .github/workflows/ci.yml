@@ -20,11 +20,14 @@ jobs:
           node-version: '24'
           cache: npm
       
+      - name: Print version before
+        run: npm version
+      
       - name: Update npm to latest
         run: |
           $NVM_DIR/nvm.sh install-latest-npm
       
-      - name: Print version
+      - name: Print version after
         run: npm version
 
       - name: Install dependencies
