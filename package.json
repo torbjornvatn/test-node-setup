@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/torbjornvatn/test-node-setup/issues"
   },
-  "homepage": "https://github.com/torbjornvatn/test-node-setup#readme"
+  "homepage": "https://github.com/torbjornvatn/test-node-setup#readme",
+  "dependencies": {
+    "astro": "6.3.3"
+  }
 }
