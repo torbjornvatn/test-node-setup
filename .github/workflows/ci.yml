@@ -21,7 +21,7 @@ jobs:
           echo "npm --version"
           npm --version
           echo "npm config"
-          npm config list -l
+          npm config list -L .npmrc
         
       - uses: actions/checkout@v6
       
@@ -38,7 +38,7 @@ jobs:
           echo "npm --version"
           npm --version
           echo "npm config"
-          npm config list -l
+          npm config list -L .npmrc
 
       # Optional: Cache npm dependencies
       - name: Get npm cache directory
