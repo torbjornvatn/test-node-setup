@@ -22,7 +22,7 @@ jobs:
       - name: Install Node.js via nvm
         shell: bash --login {0}
         run: |
-          nvm install --no-progress
+          nvm install --no-progress --latest-npm
           echo "$(dirname $(nvm which node))" >> $GITHUB_PATH
           
       - name: Show newly installed Node.js version
@@ -35,7 +35,7 @@ jobs:
         run: echo "dir=$(npm config get cache)" >> $GITHUB_OUTPUT
         
       - name: Store npm cache
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         id: npm-cache
         with:
           path: ${{ steps.npm-cache-dir.outputs.dir }}
