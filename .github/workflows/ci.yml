@@ -21,7 +21,7 @@ jobs:
           echo "npm --version"
           npm --version
           echo "npm config"
-          npm config list -l | grep -E "min-release-age|allow-git"
+          npm config list -l
         
       - uses: actions/checkout@v6
       
@@ -38,7 +38,7 @@ jobs:
           echo "npm --version"
           npm --version
           echo "npm config"
-          npm config list -l | grep -E "min-release-age|allow-git"
+          npm config list -l
 
       # Optional: Cache npm dependencies
       - name: Get npm cache directory
